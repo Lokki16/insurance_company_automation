@@ -1,2 +1,2 @@
-# insurance_company_automation
+# Insurance Company Automation
  Diploma Project
