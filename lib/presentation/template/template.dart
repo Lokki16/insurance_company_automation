@@ -38,10 +38,16 @@ export '../layout/default_body.dart';
 export '../widgets/spaced_column/spaced_column.dart';
 export '../widgets/spaced_row/spaced_row.dart';
 export '../widgets/custom_icon/custom_icon.dart';
-export '../widgets/custom_image/custom_image.dart';
+export '../widgets/custom_images/custom_image.dart';
+export '../widgets/custom_images/custom_network_image.dart';
 export '../widgets/custom_text/custom_text.dart';
 export '../widgets/appbar/appbar.dart';
 export '../widgets/modals/show_simple_dialog.dart';
 export '../widgets/modals/popup_layout.dart';
 
 // pages
+export 'package:insurance_company_automation/presentation/pages/welcome/welcome_page.dart';
+export 'package:insurance_company_automation/presentation/pages/login/login_page.dart';
+export 'package:insurance_company_automation/presentation/pages/registration/registration_page.dart';
+export 'package:insurance_company_automation/presentation/pages/personal_area/personal_area_page.dart';
+export 'package:insurance_company_automation/presentation/pages/settings/settings_page.dart';

@@ -10,7 +10,7 @@ class CustomIcon extends StatelessWidget {
     super.key,
     required this.icon,
     this.size = 30,
-    this.color = ThemeColors.white,
+    this.color = ThemeColors.white1,
     this.onTap,
   });
 

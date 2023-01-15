@@ -3,6 +3,7 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 class CustomText extends StatelessWidget {
   final String text;
   final TextStyle? textStyle;
+  final TextAlign? textAlign;
   final double? width;
   final double? height;
 
@@ -10,6 +11,7 @@ class CustomText extends StatelessWidget {
     Key? key,
     required this.text,
     this.textStyle,
+    this.textAlign,
     this.width,
     this.height,
   }) : super(key: key);
@@ -19,7 +21,11 @@ class CustomText extends StatelessWidget {
     return SizedBox(
       width: width,
       height: height,
-      child: Text(text.tr, style: textStyle),
+      child: Text(
+        text.tr,
+        style: textStyle,
+        textAlign: textAlign,
+      ),
     );
   }
 }

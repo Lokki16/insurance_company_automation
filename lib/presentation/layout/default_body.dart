@@ -6,6 +6,7 @@ class DefaultBody extends StatelessWidget {
   final double topPadding;
   final double bottomPadding;
   final double horizontalPadding;
+  final Widget? bottomSheet;
   final Widget child;
 
   const DefaultBody({
@@ -15,6 +16,7 @@ class DefaultBody extends StatelessWidget {
     this.topPadding = 0,
     this.bottomPadding = 0,
     this.horizontalPadding = 16,
+    this.bottomSheet,
     required this.child,
   });
 
@@ -34,6 +36,7 @@ class DefaultBody extends StatelessWidget {
         ),
         child: child,
       ),
+      bottomSheet: bottomSheet,
     );
   }
 }
