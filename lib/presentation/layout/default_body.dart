@@ -6,7 +6,8 @@ class DefaultBody extends StatelessWidget {
   final double topPadding;
   final double bottomPadding;
   final double horizontalPadding;
-  final Widget? bottomSheet;
+  final Widget? footer;
+  final double footerHeight;
   final Widget child;
 
   const DefaultBody({
@@ -16,9 +17,13 @@ class DefaultBody extends StatelessWidget {
     this.topPadding = 0,
     this.bottomPadding = 0,
     this.horizontalPadding = 16,
-    this.bottomSheet,
+    this.footer,
+    this.footerHeight = ThemeSizeStyle.footerHeight,
     required this.child,
   });
+
+  double get calcBottomPadding =>
+      footer == null ? bottomPadding : bottomPadding + footerHeight;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +41,20 @@ class DefaultBody extends StatelessWidget {
         ),
         child: child,
       ),
-      bottomSheet: bottomSheet,
+      bottomSheet: _buildFooter(),
     );
+  }
+
+  Widget? _buildFooter() {
+    if (footer != null) {
+      return Container(
+        padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 24.h),
+        color: ThemeColors.white2,
+        width: double.infinity,
+        height: footerHeight.h,
+        child: footer,
+      );
+    }
+    return null;
   }
 }

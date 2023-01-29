@@ -1,4 +1,5 @@
 import 'package:insurance_company_automation/presentation/template/template.dart';
+import 'package:insurance_company_automation/presentation/widgets/buttons/custom_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -6,7 +7,20 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultBody(
-      horizontalPadding: 62,
+      horizontalPadding: 68,
+      footer: SpacedColumn(
+        space: 6,
+        children: [
+          CustomButton(
+            buttonText: ConstantText.login,
+            onPressed: () => Get.toNamed(AppRoutes.routeToLoginPage),
+          ),
+          CustomButton(
+            buttonText: ConstantText.registration,
+            onPressed: () => Get.toNamed(AppRoutes.routeToRegistrationPage),
+          ),
+        ],
+      ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
