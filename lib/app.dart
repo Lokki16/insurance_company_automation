@@ -11,7 +11,11 @@ class InsuranceApp extends StatelessWidget {
         ThemeSizeStyle.screenHeight,
       ),
       builder: (context, child) => GetMaterialApp(
-        debugShowCheckedModeBanner: Constants.showModeBanner,
+        builder: (context, child) => MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0.sp),
+          child: child!,
+        ),
+        navigatorKey: Get.key,
         title: Constants.appTitle,
         theme: InsuranceAppTheme.lightTheme,
         darkTheme: InsuranceAppTheme.darkTheme,
@@ -20,6 +24,7 @@ class InsuranceApp extends StatelessWidget {
         fallbackLocale: Locales().enLocale,
         routes: AppRoutes.getRoutes,
         initialRoute: AppRoutes.routeToWelcomePage,
+        debugShowCheckedModeBanner: Constants.showModeBanner,
       ),
     );
   }
