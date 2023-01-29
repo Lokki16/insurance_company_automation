@@ -7,7 +7,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultBody(
-      horizontalPadding: 68,
+      horizontalPadding: 63,
       footer: SpacedColumn(
         space: 6,
         children: [
@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CustomImage(image: 'assets/images/insurance.png', size: 140),
+            const CustomImage(image: 'assets/images/insurance.png'),
             SizedBox(height: 28.h),
             const CustomText(
               text: ConstantText.welcome,

@@ -7,7 +7,7 @@ class CustomImage extends StatelessWidget {
   const CustomImage({
     Key? key,
     required this.image,
-    this.size = 100,
+    this.size = 140,
   }) : super(key: key);
 
   @override
