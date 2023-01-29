@@ -15,7 +15,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: CustomText(text: title),
+      title: CustomText(text: title, textStyle: ThemeTextInter.w700s14),
+      centerTitle: true,
       leading: back ? null : const SizedBox.shrink(),
       actions: const [],
     );

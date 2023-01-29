@@ -28,10 +28,7 @@ class DefaultBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: title,
-        back: back,
-      ),
+      appBar: CustomAppBar(title: title, back: back),
       body: Padding(
         padding: EdgeInsets.only(
           top: topPadding.h,

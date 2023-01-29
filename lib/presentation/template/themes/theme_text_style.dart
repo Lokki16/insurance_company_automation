@@ -16,6 +16,7 @@ class ThemeTextInter {
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontSize: 12,
+    color: ThemeColors.black1,
   );
 
   static const w400s14 = TextStyle(
@@ -23,6 +24,7 @@ class ThemeTextInter {
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontSize: 14,
+    color: ThemeColors.black1,
   );
 
   static const w600s12 = TextStyle(
@@ -37,6 +39,7 @@ class ThemeTextInter {
     fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
     fontSize: 14,
+    color: ThemeColors.black1,
   );
 
   static const w700s16 = TextStyle(

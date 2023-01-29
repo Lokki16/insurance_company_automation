@@ -6,6 +6,10 @@ class InsuranceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      designSize: const Size(
+        ThemeSizeStyle.screenWidth,
+        ThemeSizeStyle.screenHeight,
+      ),
       builder: (context, child) => GetMaterialApp(
         debugShowCheckedModeBanner: Constants.showModeBanner,
         title: Constants.appTitle,
