@@ -27,9 +27,9 @@ class _Footer extends StatelessWidget {
           buttonText: ConstantText.login,
           onPressed: () => Get.toNamed(AppRoutes.routeToPersonalAreaPage),
         ),
-        const CustomText(
+        CustomText(
           text: ConstantText.userAgreementTerms,
-          textStyle: ThemeTextInter.w400s12,
+          textStyle: ThemeTextInter.w400s12.copyWith(color: ThemeColors.black4),
           textAlign: TextAlign.center,
         ),
       ],
@@ -52,11 +52,15 @@ class _Child extends StatelessWidget {
         ),
         SizedBox(height: 170.h),
         CustomTextField(
-          nameField: ConstantText.email,
+          hintText: ConstantText.email,
+          validator: (email) => Validator.signInEmailValidator(email),
+          onChanged: (email) {},
         ),
         SizedBox(height: 29.h),
         CustomTextField(
-          nameField: ConstantText.password,
+          hintText: ConstantText.password,
+          validator: (password) => Validator.signInPasswordValidator(password),
+          onChanged: (password) {},
         ),
         SizedBox(height: 48.h),
         TextButton(

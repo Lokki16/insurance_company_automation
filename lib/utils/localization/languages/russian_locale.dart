@@ -34,5 +34,9 @@ class Russian {
     ConstantText.demoMode: 'Демо-режим',
     ConstantText.activate: 'Активировать',
     ConstantText.skip: 'Пропустить',
+    ConstantText.enterYourEmail: 'Введите email',
+    ConstantText.enterValidEmail: 'Введите действующий email',
+    ConstantText.enterYourPassword: 'Введите ваш пароль',
+    ConstantText.passwordShouldContain: 'Пароль должен содержать 6 символов!',
   };
 }

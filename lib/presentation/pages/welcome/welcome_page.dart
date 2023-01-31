@@ -18,8 +18,8 @@ class _Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SpacedColumn(
-      space: 6,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         CustomButton(
           buttonText: ConstantText.toComeIn,

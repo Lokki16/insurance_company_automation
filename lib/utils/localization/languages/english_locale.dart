@@ -34,5 +34,9 @@ class English {
     ConstantText.demoMode: 'Demo mode',
     ConstantText.activate: 'Activate',
     ConstantText.skip: 'Skip',
+    ConstantText.enterYourEmail: 'Enter your email',
+    ConstantText.enterValidEmail: 'Enter valid email',
+    ConstantText.enterYourPassword: 'Enter your password',
+    ConstantText.passwordShouldContain: 'Password should contain 6 characters!',
   };
 }

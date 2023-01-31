@@ -12,6 +12,7 @@ class ThemeColors {
   static const black1 = Color(0xFF000000);
   static const black2 = Color(0x99000000);
   static const black3 = Color(0xFF4A4A4A);
+  static const black4 = Color(0xFF858585);
 
   // orange
   static const orange1 = Color(0xFFFD5D00);

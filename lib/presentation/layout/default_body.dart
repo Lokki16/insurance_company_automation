@@ -28,6 +28,7 @@ class DefaultBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(title: title, back: back),
       body: Padding(
         padding: EdgeInsets.only(

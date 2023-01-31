@@ -27,27 +27,19 @@ class CustomTextField extends StatelessWidget {
     return SizedBox(
       width: width,
       height: height,
-      child: SpacedColumn(
-        space: 5,
-        children: [
-          if (nameField != null)
-            CustomText(text: nameField!, textStyle: ThemeTextInter.w400s14),
-          TextFormField(
-            obscureText: obscureText,
-            validator: validator,
-            style: const TextStyle(color: ThemeColors.black1),
-            cursorColor: ThemeColors.white1,
-            decoration: InputDecoration(
-              border: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: ThemeColors.black3)),
-              hintText: hintText,
-              hintStyle: ThemeTextInter.w400s14,
-              prefixIcon:
-                  icon != null ? CustomIcon(icon: icon!, size: 20) : null,
-            ),
-            onChanged: onChanged,
-          ),
-        ],
+      child: TextFormField(
+        obscureText: obscureText,
+        validator: validator,
+        style: const TextStyle(color: ThemeColors.black1),
+        cursorColor: ThemeColors.white1,
+        decoration: InputDecoration(
+          border: const UnderlineInputBorder(
+              borderSide: BorderSide(color: ThemeColors.black3)),
+          hintText: hintText?.tr,
+          hintStyle: ThemeTextInter.w400s14,
+          prefixIcon: icon != null ? CustomIcon(icon: icon!, size: 20) : null,
+        ),
+        onChanged: onChanged,
       ),
     );
   }

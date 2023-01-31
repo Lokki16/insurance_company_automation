@@ -28,4 +28,8 @@ class ConstantText {
   static const demoMode = 'demo_mode';
   static const activate = 'activate';
   static const skip = 'skip';
+  static const enterYourEmail = 'enter_your_email';
+  static const enterValidEmail = 'enter_valid_email';
+  static const enterYourPassword = 'enter_your_password';
+  static const passwordShouldContain = 'password_should_contain';
 }
