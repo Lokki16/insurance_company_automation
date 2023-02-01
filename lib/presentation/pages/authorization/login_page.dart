@@ -60,6 +60,7 @@ class _Child extends StatelessWidget {
         SizedBox(height: 29.h),
         CustomTextField(
           hintText: ConstantText.password,
+          obscureText: true,
           validator: (password) => Validator.signInPasswordValidator(password),
           onChanged: (password) {},
         ),

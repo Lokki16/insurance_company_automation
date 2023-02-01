@@ -15,16 +15,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: CustomText(text: title, textStyle: ThemeTextInter.w700s14),
       centerTitle: true,
-      leading: back
-          ? CustomIcon(
-              icon: InsuranceIcons.arrowLeft,
-              onTap: () => Get.back(),
-            )
-          : null,
+      leading: _buildLeading(),
       actions: const [],
     );
   }
 
   @override
   Size get preferredSize => const Size(double.infinity, 60);
+
+  Widget? _buildLeading() {
+    if (back) {
+      return CustomIcon(
+        icon: InsuranceIcons.arrowLeft,
+        onPressed: () => Get.back(),
+      );
+    }
+    return null;
+  }
 }

@@ -31,12 +31,16 @@ class CustomTextField extends StatelessWidget {
         obscureText: obscureText,
         validator: validator,
         style: const TextStyle(color: ThemeColors.black1),
-        cursorColor: ThemeColors.white1,
+        cursorColor: ThemeColors.orange2,
         decoration: InputDecoration(
-          border: const UnderlineInputBorder(
-              borderSide: BorderSide(color: ThemeColors.black3)),
+          enabledBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: ThemeColors.black4),
+          ),
+          focusedBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: ThemeColors.orange2),
+          ),
           hintText: hintText?.tr,
-          hintStyle: ThemeTextInter.w400s14,
+          hintStyle: ThemeTextInter.w400s14.copyWith(color: ThemeColors.black4),
           prefixIcon: icon != null ? CustomIcon(icon: icon!, size: 20) : null,
         ),
         onChanged: onChanged,
