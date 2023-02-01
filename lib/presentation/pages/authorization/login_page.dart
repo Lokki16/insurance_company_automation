@@ -47,7 +47,7 @@ class _Child extends StatelessWidget {
       children: [
         const Center(
           child: CustomImage(
-            image: 'assets/images/insurance.png',
+            image: InsuranceImages.insurance,
             size: 103,
           ),
         ),

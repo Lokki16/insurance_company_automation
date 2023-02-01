@@ -1,7 +1,7 @@
 import 'package:insurance_company_automation/presentation/template/template.dart';
 
 class CustomImage extends StatelessWidget {
-  final String image;
+  final InsuranceImages image;
   final double size;
 
   const CustomImage({
@@ -15,7 +15,7 @@ class CustomImage extends StatelessWidget {
     return SizedBox(
       width: size.w,
       height: size.h,
-      child: Image.asset(image),
+      child: Image.asset('assets/images/${image.name}.png'),
     );
   }
 }

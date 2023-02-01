@@ -43,7 +43,7 @@ class _Child extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const CustomImage(image: 'assets/images/insurance.png'),
+          const CustomImage(image: InsuranceImages.insurance),
           SizedBox(height: 28.h),
           const CustomText(
             text: ConstantText.welcome,

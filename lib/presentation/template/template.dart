@@ -17,7 +17,6 @@ export 'themes/theme_text_style.dart';
 // common
 export '../../utils/common/constants.dart';
 export '../../utils/common/constant_text.dart';
-export '../../utils/common/insurance_icons.dart';
 export '../../utils/common/log_tester.dart';
 export '../../utils/common/validators.dart';
 
@@ -41,9 +40,11 @@ export '../layout/default_body.dart';
 // widgets
 export '../widgets/spaced_column/spaced_column.dart';
 export '../widgets/spaced_row/spaced_row.dart';
-export '../widgets/custom_icons/custom_icon.dart';
-export '../widgets/custom_images/custom_image.dart';
-export '../widgets/custom_images/custom_network_image.dart';
+export '../widgets/icons/insurance_icons.dart';
+export '../widgets/icons/custom_icon.dart';
+export '../widgets/images/insurance_images.dart';
+export '../widgets/images/custom_image.dart';
+export '../widgets/images/custom_network_image.dart';
 export '../widgets/text/custom_text.dart';
 export '../widgets/text_field/custom_text_field.dart';
 export '../widgets/buttons/custom_button.dart';
