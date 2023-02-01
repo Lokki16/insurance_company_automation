@@ -39,24 +39,29 @@ class _Child extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const CustomImage(image: InsuranceImages.insurance),
-          SizedBox(height: 28.h),
-          const CustomText(
-            text: ConstantText.welcome,
-            textStyle: ThemeTextInter.w700s14,
-          ),
-          SizedBox(height: 18.h),
-          CustomText(
-            text: ConstantText.welcomeText,
-            textStyle:
-                ThemeTextInter.w400s12.copyWith(color: ThemeColors.black3),
-            textAlign: TextAlign.center,
-          ),
-        ],
+    return SizedBox(
+      height: MediaQuery.of(context).size.height -
+          ThemeSizeStyle.appBarHeight -
+          ThemeSizeStyle.footerHeight,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CustomImage(image: InsuranceImages.insurance),
+            SizedBox(height: 28.h),
+            const CustomText(
+              text: ConstantText.welcome,
+              textStyle: ThemeTextInter.w700s14,
+            ),
+            SizedBox(height: 18.h),
+            CustomText(
+              text: ConstantText.welcomeText,
+              textStyle:
+                  ThemeTextInter.w400s12.copyWith(color: ThemeColors.black3),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }
