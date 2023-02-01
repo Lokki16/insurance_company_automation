@@ -7,6 +7,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const DefaultBody(
       title: ConstantText.login,
+      back: true,
       topPadding: 48,
       horizontalPadding: 9,
       footer: _Footer(),

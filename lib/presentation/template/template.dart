@@ -4,6 +4,7 @@ export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:get/get.dart';
 export 'package:formz/formz.dart';
 export 'package:equatable/equatable.dart';
+export 'package:flutter_svg/flutter_svg.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 
 // themes
@@ -16,6 +17,7 @@ export 'themes/theme_text_style.dart';
 // common
 export '../../utils/common/constants.dart';
 export '../../utils/common/constant_text.dart';
+export '../../utils/common/insurance_icons.dart';
 export '../../utils/common/log_tester.dart';
 export '../../utils/common/validators.dart';
 

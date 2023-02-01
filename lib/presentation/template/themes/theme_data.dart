@@ -14,7 +14,6 @@ class InsuranceAppTheme {
         bottomSheetTheme:
             const BottomSheetThemeData(backgroundColor: Colors.transparent),
         // progressIndicatorTheme: _progressIndicatorTheme(),
-        toggleableActiveColor: ThemeColors.orange1,
         buttonTheme: _buttonTheme(),
         textButtonTheme: _textButtonTheme(),
         // checkboxTheme: _checkboxTheme(),

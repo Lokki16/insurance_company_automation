@@ -3,13 +3,11 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool back;
-  final VoidCallback? onPressed;
 
   const CustomAppBar({
     super.key,
     required this.title,
     required this.back,
-    this.onPressed,
   });
 
   @override
@@ -17,7 +15,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: CustomText(text: title, textStyle: ThemeTextInter.w700s14),
       centerTitle: true,
-      leading: back ? null : const SizedBox.shrink(),
+      leading: back
+          ? CustomIcon(
+              icon: InsuranceIcons.arrowLeft,
+              onTap: () => Get.back(),
+            )
+          : null,
       actions: const [],
     );
   }

@@ -13,7 +13,7 @@ class DefaultBody extends StatelessWidget {
   const DefaultBody({
     super.key,
     this.title = '',
-    this.back = true,
+    this.back = false,
     this.topPadding = 0,
     this.bottomPadding = 0,
     this.horizontalPadding = 16,

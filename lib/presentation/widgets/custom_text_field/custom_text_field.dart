@@ -3,7 +3,7 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 class CustomTextField extends StatelessWidget {
   final String? nameField;
   final String? hintText;
-  final IconData? icon;
+  final InsuranceIcons? icon;
   final double width;
   final double height;
   final bool obscureText;

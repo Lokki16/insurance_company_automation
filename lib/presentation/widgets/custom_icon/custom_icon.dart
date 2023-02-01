@@ -1,7 +1,7 @@
 import 'package:insurance_company_automation/presentation/template/template.dart';
 
 class CustomIcon extends StatelessWidget {
-  final IconData icon;
+  final InsuranceIcons icon;
   final double size;
   final Color color;
   final VoidCallback? onTap;
@@ -9,17 +9,22 @@ class CustomIcon extends StatelessWidget {
   const CustomIcon({
     super.key,
     required this.icon,
-    this.size = 30,
-    this.color = ThemeColors.white1,
+    this.size = 16,
+    this.color = ThemeColors.orange1,
     this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      mouseCursor: MouseCursor.defer,
       onTap: onTap,
-      child: Icon(icon, color: color, size: size),
+      child: SvgPicture.asset(
+        'assets/icons/${icon.name}.svg',
+        color: color,
+        width: size,
+        height: size,
+        alignment: Alignment.center,
+      ),
     );
   }
 }
