@@ -80,11 +80,11 @@ class _Child extends StatelessWidget {
           validator: (email) => Validator.signInEmailValidator(email),
           onChanged: (email) {},
         ),
+        SizedBox(height: 36.h),
         CustomCheckbox(
           text: ConstantText.processingOfPersonalData,
           onChanged: (patronymic) {},
         ),
-        SizedBox(height: 36.h),
       ],
     );
   }

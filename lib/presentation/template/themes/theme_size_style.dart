@@ -3,5 +3,5 @@ class ThemeSizeStyle {
   static const double screenHeight = 926;
 
   static const double appBarHeight = 64;
-  static const double footerHeight = 173;
+  static const double footerHeight = 140;
 }

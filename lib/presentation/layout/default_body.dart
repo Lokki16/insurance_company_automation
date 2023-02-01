@@ -46,7 +46,7 @@ class DefaultBody extends StatelessWidget {
   Widget? _buildFooter() {
     if (footer != null) {
       return Container(
-        padding: EdgeInsets.symmetric(horizontal: 67.w, vertical: 24.h),
+        padding: EdgeInsets.symmetric(horizontal: 67.w),
         color: ThemeColors.white2,
         width: double.infinity,
         height: footerHeight.h,
