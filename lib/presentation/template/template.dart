@@ -28,12 +28,17 @@ export '../../utils/localization/languages/english_locale.dart';
 export '../../data/navigation/routes.dart';
 
 // repositories
+export '../../data/repositories/authorization/authorization_repository.dart';
+export '../../data/repositories/policy/policy_repository.dart';
 
 // models
+export '../../data/models/authorization/login_model.dart';
+export '../../data/models/authorization/registration_model.dart';
 export '../../data/models/policy/policy_model.dart';
 export '../../data/models/policy/list_policy_model.dart';
 
 // bloc
+export '../../bloc/policy/policy_bloc.dart';
 
 // layout
 export '../layout/default_body.dart';
