@@ -7,8 +7,8 @@ part of 'policy_model.dart';
 // **************************************************************************
 
 PolicyModel _$PolicyModelFromJson(Map json) => PolicyModel(
-      id: json['id'] as int?,
-      policyType: $enumDecode(_$PolicyEnumEnumMap, json['policyType']),
+      id: json['id'] as int,
+      policyType: json['policy_type'] as String,
       name: json['name'] as String,
       policies: (json['policies'] as List<dynamic>)
           .map((e) => Map<String, String>.from(e as Map))
@@ -18,12 +18,7 @@ PolicyModel _$PolicyModelFromJson(Map json) => PolicyModel(
 Map<String, dynamic> _$PolicyModelToJson(PolicyModel instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'policyType': _$PolicyEnumEnumMap[instance.policyType]!,
+      'policy_type': instance.policyType,
       'name': instance.name,
       'policies': instance.policies,
     };
-
-const _$PolicyEnumEnumMap = {
-  PolicyEnum.car: 'car',
-  PolicyEnum.health: 'health',
-};

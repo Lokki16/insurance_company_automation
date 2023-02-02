@@ -18,7 +18,7 @@ class PolicyInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomText(
-            text: policy.policyType == PolicyEnum.car
+            text: policy.policyType == 'car'
                 ? InsuranceText.car
                 : InsuranceText.insured,
             textStyle:
@@ -30,14 +30,14 @@ class PolicyInfo extends StatelessWidget {
           Row(
             children: [
               CustomIcon(
-                icon: policy.policyType == PolicyEnum.car
+                icon: policy.policyType == 'car'
                     ? InsuranceIcons.car
                     : InsuranceIcons.heartRate,
                 size: 13,
               ),
               SizedBox(width: 5.w),
               CustomText(
-                text: policy.policyType == PolicyEnum.car
+                text: policy.policyType == 'car'
                     ? InsuranceText.car
                     : InsuranceText.health,
                 textStyle: ThemeTextInter.w400s12,

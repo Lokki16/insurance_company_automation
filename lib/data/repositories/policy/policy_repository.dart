@@ -9,8 +9,12 @@ class PolicyRepository {
   Future<ListPolicyModel> getPolicy() async {
     try {
       final response = await http.get(Uri.parse(_url));
-      return ListPolicyModel.fromJson(json.decode(response.body));
+      logger(response.body);
+      final test = ListPolicyModel.fromJson(json.decode(response.body));
+      logger(test);
+      return test;
     } catch (e) {
+      logger(e.toString());
       throw Exception(e.toString());
     }
   }

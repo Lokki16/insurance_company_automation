@@ -1,7 +1,7 @@
 {
-    "policy": [
+    "policies": [
         {
-            "id": "0",
+            "id": 0,
             "policy_type": "car",
             "name": "Bugatti La Voiture Noire",
             "policies": [
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "id": "1",
+            "id": 1,
             "policy_type": "health",
             "name": "Демо режим",
             "policies": [

@@ -32,9 +32,9 @@ class _PersonalAreaPageState extends State<PersonalAreaPage> {
           child: state.when(
             loading: () => const _Loading(),
             loaded: (policyLoaded) {
-              listOfPolicy = policyLoaded.listOfPolicy;
+              listOfPolicy = policyLoaded.policies;
               return listOfPolicy.isNotEmpty
-                  ? _Loaded(listOfPolicy: policyLoaded.listOfPolicy)
+                  ? _Loaded(listOfPolicy: policyLoaded.policies)
                   : const _NoData();
             },
             error: () => const _Error(),
@@ -94,7 +94,8 @@ class _Loaded extends StatelessWidget {
       children: [
         const PolicyInfo(
           policy: PolicyModel(
-            policyType: PolicyEnum.car,
+            id: 0,
+            policyType: 'car',
             name: 'Bugatti La Voiture Noire',
             policies: [
               {
@@ -111,7 +112,8 @@ class _Loaded extends StatelessWidget {
         SizedBox(height: 24.h),
         const PolicyInfo(
           policy: PolicyModel(
-            policyType: PolicyEnum.health,
+            id: 1,
+            policyType: 'health',
             name: 'Демо режим',
             policies: [
               {
