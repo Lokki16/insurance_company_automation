@@ -1,4 +1,4 @@
-class ConstantText {
+class InsuranceText {
   static const welcome = 'welcome';
   static const welcomeText = 'welcome_text';
   static const toComeIn = 'toComeIn';

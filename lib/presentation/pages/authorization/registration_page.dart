@@ -6,9 +6,9 @@ class RegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const DefaultBody(
-      title: ConstantText.registration,
+      title: InsuranceText.registration,
       back: true,
-      topPadding: 48,
+      topPadding: 49,
       horizontalPadding: 9,
       footer: _Footer(),
       child: _Child(),
@@ -24,7 +24,7 @@ class _Footer extends StatelessWidget {
     return SpacedColumn(
       children: [
         CustomButton(
-          buttonText: ConstantText.registration,
+          buttonText: InsuranceText.registration,
           onPressed: () => Get.toNamed(AppRoutes.routeToPersonalAreaPage),
         ),
       ],
@@ -40,49 +40,49 @@ class _Child extends StatelessWidget {
     return Column(
       children: [
         CustomTextField(
-          hintText: ConstantText.surname,
+          hintText: InsuranceText.surname,
           validator: (surname) => Validator.signInEmailValidator(surname),
           onChanged: (surname) {},
         ),
         SizedBox(height: 29.h),
         CustomTextField(
-          hintText: ConstantText.name,
+          hintText: InsuranceText.name,
           validator: (name) => Validator.signInEmailValidator(name),
           onChanged: (name) {},
         ),
         SizedBox(height: 29.h),
         CustomTextField(
-          hintText: ConstantText.patronymic,
+          hintText: InsuranceText.patronymic,
           validator: (patronymic) => Validator.signInEmailValidator(patronymic),
           onChanged: (patronymic) {},
         ),
         SizedBox(height: 25.h),
         CustomCheckbox(
-          text: ConstantText.notPatronymic,
+          text: InsuranceText.notPatronymic,
           onChanged: (patronymic) {},
         ),
         SizedBox(height: 63.h),
         CustomTextField(
-          hintText: ConstantText.phoneNumber,
+          hintText: InsuranceText.phoneNumber,
           validator: (phoneNumber) =>
               Validator.signInEmailValidator(phoneNumber),
           onChanged: (phoneNumber) {},
         ),
         SizedBox(height: 29.h),
         CustomTextField(
-          hintText: ConstantText.birthDate,
+          hintText: InsuranceText.birthDate,
           validator: (birthDate) => Validator.signInEmailValidator(birthDate),
           onChanged: (birthDate) {},
         ),
         SizedBox(height: 29.h),
         CustomTextField(
-          hintText: ConstantText.email,
+          hintText: InsuranceText.email,
           validator: (email) => Validator.signInEmailValidator(email),
           onChanged: (email) {},
         ),
         SizedBox(height: 36.h),
         CustomCheckbox(
-          text: ConstantText.processingOfPersonalData,
+          text: InsuranceText.processingOfPersonalData,
           onChanged: (patronymic) {},
         ),
       ],

@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const DefaultBody(
-      title: ConstantText.login,
+      title: InsuranceText.login,
       back: true,
       topPadding: 48,
       horizontalPadding: 9,
@@ -25,11 +25,11 @@ class _Footer extends StatelessWidget {
       space: 14,
       children: [
         CustomButton(
-          buttonText: ConstantText.login,
+          buttonText: InsuranceText.login,
           onPressed: () => Get.toNamed(AppRoutes.routeToPersonalAreaPage),
         ),
         CustomText(
-          text: ConstantText.userAgreementTerms,
+          text: InsuranceText.userAgreementTerms,
           textStyle: ThemeTextInter.w400s12.copyWith(color: ThemeColors.black4),
           textAlign: TextAlign.center,
         ),
@@ -53,13 +53,13 @@ class _Child extends StatelessWidget {
         ),
         SizedBox(height: 170.h),
         CustomTextField(
-          hintText: ConstantText.email,
+          hintText: InsuranceText.email,
           validator: (email) => Validator.signInEmailValidator(email),
           onChanged: (email) {},
         ),
         SizedBox(height: 29.h),
         CustomTextField(
-          hintText: ConstantText.password,
+          hintText: InsuranceText.password,
           obscureText: true,
           validator: (password) => Validator.signInPasswordValidator(password),
           onChanged: (password) {},
@@ -67,7 +67,7 @@ class _Child extends StatelessWidget {
         SizedBox(height: 48.h),
         TextButton(
           onPressed: () => Get.toNamed(AppRoutes.routeToForgotPasswordPage),
-          child: const CustomText(text: ConstantText.forgotPassword),
+          child: const CustomText(text: InsuranceText.forgotPassword),
         ),
       ],
     );

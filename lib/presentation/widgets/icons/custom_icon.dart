@@ -3,14 +3,14 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 class CustomIcon extends StatelessWidget {
   final InsuranceIcons icon;
   final double size;
-  final Color color;
+  final Color? color;
   final VoidCallback? onPressed;
 
   const CustomIcon({
     super.key,
     required this.icon,
     this.size = 16,
-    this.color = ThemeColors.orange1,
+    this.color,
     this.onPressed,
   });
 

@@ -22,11 +22,11 @@ class _Footer extends StatelessWidget {
       space: 6,
       children: [
         CustomButton(
-          buttonText: ConstantText.toComeIn,
+          buttonText: InsuranceText.toComeIn,
           onPressed: () => Get.toNamed(AppRoutes.routeToLoginPage),
         ),
         CustomButton(
-          buttonText: ConstantText.registration,
+          buttonText: InsuranceText.registration,
           onPressed: () => Get.toNamed(AppRoutes.routeToRegistrationPage),
         ),
       ],
@@ -50,12 +50,12 @@ class _Child extends StatelessWidget {
             const CustomImage(image: InsuranceImages.insurance),
             SizedBox(height: 28.h),
             const CustomText(
-              text: ConstantText.welcome,
+              text: InsuranceText.welcome,
               textStyle: ThemeTextInter.w700s14,
             ),
             SizedBox(height: 18.h),
             CustomText(
-              text: ConstantText.welcomeText,
+              text: InsuranceText.welcomeText,
               textStyle:
                   ThemeTextInter.w400s12.copyWith(color: ThemeColors.black3),
               textAlign: TextAlign.center,

@@ -16,7 +16,6 @@ export 'themes/theme_text_style.dart';
 
 // common
 export '../../utils/common/constants.dart';
-export '../../utils/common/constant_text.dart';
 export '../../utils/common/log_tester.dart';
 export '../../utils/common/validators.dart';
 
@@ -45,6 +44,7 @@ export '../widgets/icons/custom_icon.dart';
 export '../widgets/images/insurance_images.dart';
 export '../widgets/images/custom_image.dart';
 export '../widgets/images/custom_network_image.dart';
+export '../widgets/text/insurance_text.dart';
 export '../widgets/text/custom_text.dart';
 export '../widgets/text_field/custom_text_field.dart';
 export '../widgets/buttons/custom_button.dart';
@@ -52,6 +52,8 @@ export '../widgets/appbar/appbar.dart';
 export '../widgets/modals/show_simple_dialog.dart';
 export '../widgets/modals/popup_layout.dart';
 export '../widgets/checkbox/custom_checkbox.dart';
+export '../widgets/policy/policy.dart';
+export '../widgets/policy/policy_info.dart';
 
 // pages
 export 'package:insurance_company_automation/presentation/pages/welcome/welcome_page.dart';
