@@ -28,6 +28,8 @@ class Russian {
     InsuranceText.policies: 'Полисы',
     InsuranceText.casco: 'КАСКО',
     InsuranceText.osago: 'ОСАГО',
+    InsuranceText.dms: 'ДМС',
+    InsuranceText.antiOnko: 'АнтиОнко',
     InsuranceText.buy: 'Купить',
     InsuranceText.buyPolicy: 'Купить полис',
     InsuranceText.chat: 'Чат',

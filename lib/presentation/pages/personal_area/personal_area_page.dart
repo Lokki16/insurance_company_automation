@@ -38,9 +38,39 @@ class _Child extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        PolicyInfo(),
+        const PolicyInfo(
+          policy: PolicyModel(
+            policyType: PolicyEnum.car,
+            name: 'Bugatti La Voiture Noire',
+            policies: [
+              {
+                'type': InsuranceText.casco,
+                'date': '29 декабря 2024',
+              },
+              {
+                'type': InsuranceText.osago,
+                'date': '29 декабря 2024',
+              },
+            ],
+          ),
+        ),
         SizedBox(height: 24.h),
-        PolicyInfo(),
+        const PolicyInfo(
+          policy: PolicyModel(
+            policyType: PolicyEnum.health,
+            name: 'Демо режим',
+            policies: [
+              {
+                'type': InsuranceText.dms,
+                'date': '9 мая 2025',
+              },
+              {
+                'type': InsuranceText.antiOnko,
+                'date': '12 октября 2023',
+              },
+            ],
+          ),
+        ),
         SizedBox(height: 54.h),
         const CustomText(
           text: InsuranceText.policies,

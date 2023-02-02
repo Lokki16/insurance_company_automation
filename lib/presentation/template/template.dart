@@ -30,6 +30,8 @@ export '../../data/navigation/routes.dart';
 // repositories
 
 // models
+export '../../data/models/policy_model.dart';
+export '../../data/models/list_policy_model.dart';
 
 // bloc
 

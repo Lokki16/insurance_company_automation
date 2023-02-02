@@ -13,7 +13,7 @@ class Policy extends StatelessWidget {
       height: 72.h,
       decoration: BoxDecoration(
         color: ThemeColors.white1,
-        borderRadius: BorderRadius.all(Radius.circular(15.r)),
+        borderRadius: BorderRadius.circular(15.r),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

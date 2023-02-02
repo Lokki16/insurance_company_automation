@@ -22,6 +22,8 @@ class InsuranceText {
   static const policies = 'policies';
   static const casco = 'casco';
   static const osago = 'osago';
+  static const dms = 'dms';
+  static const antiOnko = 'anti_onko';
   static const buy = 'buy';
   static const buyPolicy = 'buy_policy';
   static const chat = 'chat';

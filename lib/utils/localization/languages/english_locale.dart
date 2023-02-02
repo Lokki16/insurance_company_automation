@@ -28,6 +28,8 @@ class English {
     InsuranceText.policies: 'Policies',
     InsuranceText.casco: 'CASCO',
     InsuranceText.osago: 'OSAGO',
+    InsuranceText.dms: 'DMS',
+    InsuranceText.antiOnko: 'AntiOnko',
     InsuranceText.buy: 'Buy',
     InsuranceText.buyPolicy: 'Buy a policy',
     InsuranceText.chat: 'Chat',
