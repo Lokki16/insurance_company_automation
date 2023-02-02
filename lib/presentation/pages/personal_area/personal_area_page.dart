@@ -32,9 +32,9 @@ class _PersonalAreaPageState extends State<PersonalAreaPage> {
           child: state.when(
             loading: () => const _Loading(),
             loaded: (policyLoaded) {
-              listOfPolicy = policyLoaded.policies;
+              listOfPolicy = policyLoaded.result;
               return listOfPolicy.isNotEmpty
-                  ? _Loaded(listOfPolicy: policyLoaded.policies)
+                  ? _Loaded(listOfPolicy: policyLoaded.result)
                   : const _NoData();
             },
             error: () => const _Error(),

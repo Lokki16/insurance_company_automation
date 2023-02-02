@@ -1,34 +1,36 @@
 {
-    "policies": [
-        {
-            "id": 0,
-            "policy_type": "car",
-            "name": "Bugatti La Voiture Noire",
-            "policies": [
-                {
-                    "type": "casco",
-                    "date": "29 декабря 2024"
-                },
-                {
-                    "type": "osago",
-                    "date": "29 декабря 2024"
-                }
-            ]
-        },
-        {
-            "id": 1,
-            "policy_type": "health",
-            "name": "Демо режим",
-            "policies": [
-                {
-                    "type": "dms",
-                    "date": "9 мая 2025"
-                },
-                {
-                    "type": "anti_onko",
-                    "date": "12 октября 2023"
-                }
-            ]
-        }
-    ]
+    "policies" : {
+        "result": [
+            {
+                "id": 0,
+                "policy_type": "car",
+                "name": "Bugatti La Voiture Noire",
+                "policies": [
+                    {
+                        "type": "casco",
+                        "date": "29 декабря 2024"
+                    },
+                    {
+                        "type": "osago",
+                        "date": "29 декабря 2024"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "policy_type": "health",
+                "name": "Демо режим",
+                "policies": [
+                    {
+                        "type": "dms",
+                        "date": "9 мая 2025"
+                    },
+                    {
+                        "type": "anti_onko",
+                        "date": "12 октября 2023"
+                    }
+                ]
+            }
+        ]
+    }
 }

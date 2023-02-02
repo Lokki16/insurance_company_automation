@@ -5,10 +5,10 @@ part 'list_policy_model.g.dart';
 
 @JsonSerializable(anyMap: true)
 class ListPolicyModel {
-  final List<PolicyModel> policies;
+  final List<PolicyModel> result;
 
   @override
-  const ListPolicyModel({required this.policies});
+  const ListPolicyModel({required this.result});
 
   factory ListPolicyModel.fromJson(Map json) => _$ListPolicyModelFromJson(json);
 

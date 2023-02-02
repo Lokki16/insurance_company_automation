@@ -4,7 +4,7 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 
 class PolicyRepository {
   final _url =
-      'https://my-json-server.typicode.com/Lokki16/insurance_company_automation/policy';
+      'https://my-json-server.typicode.com/Lokki16/insurance_company_automation/policies';
 
   Future<ListPolicyModel> getPolicy() async {
     try {
@@ -14,7 +14,7 @@ class PolicyRepository {
       logger(test);
       return test;
     } catch (e) {
-      logger(e.toString());
+      logger(e);
       throw Exception(e.toString());
     }
   }

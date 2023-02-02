@@ -7,12 +7,12 @@ part of 'list_policy_model.dart';
 // **************************************************************************
 
 ListPolicyModel _$ListPolicyModelFromJson(Map json) => ListPolicyModel(
-      policies: (json['policies'] as List<dynamic>)
+      result: (json['result'] as List<dynamic>)
           .map((e) => PolicyModel.fromJson(e as Map))
           .toList(),
     );
 
 Map<String, dynamic> _$ListPolicyModelToJson(ListPolicyModel instance) =>
     <String, dynamic>{
-      'policies': instance.policies,
+      'result': instance.result,
     };
