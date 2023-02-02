@@ -26,9 +26,8 @@ class _PersonalAreaPageState extends State<PersonalAreaPage> {
       builder: (context, state) {
         return DefaultBody(
           title: InsuranceText.personalArea,
-          topPadding: 54,
           horizontalPadding: 7,
-          footer: const _Footer(),
+          footer: _Footer(),
           child: state.when(
             loading: () => const _Loading(),
             loaded: (policyLoaded) {
@@ -54,7 +53,7 @@ class _Footer extends StatelessWidget {
       children: [
         CustomButton(
           buttonText: InsuranceText.buy,
-          onPressed: () => Get.toNamed(AppRoutes.routeToLoginPage),
+          onPressed: () {},
         ),
       ],
     );
@@ -90,67 +89,38 @@ class _Loaded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const PolicyInfo(
-          policy: PolicyModel(
-            id: 0,
-            policyType: 'car',
-            name: 'Bugatti La Voiture Noire',
-            policies: [
-              {
-                'type': InsuranceText.casco,
-                'date': '29 декабря 2024',
-              },
-              {
-                'type': InsuranceText.osago,
-                'date': '29 декабря 2024',
-              },
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SpacedColumn(space: 24, children: [
+            for (final policy in listOfPolicy) PolicyInfo(policy: policy),
+          ]),
+          SizedBox(height: 54.h),
+          const CustomText(
+            text: InsuranceText.policies,
+            textStyle: ThemeTextInter.w700s16,
+          ),
+          SizedBox(height: 28.h),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Policy(
+                icon: InsuranceIcons.heartRate,
+                text: InsuranceText.health,
+              ),
+              Policy(
+                icon: InsuranceIcons.medicalInsurance,
+                text: InsuranceText.casco,
+              ),
+              Policy(
+                icon: InsuranceIcons.insurance,
+                text: InsuranceText.osago,
+              ),
             ],
           ),
-        ),
-        SizedBox(height: 24.h),
-        const PolicyInfo(
-          policy: PolicyModel(
-            id: 1,
-            policyType: 'health',
-            name: 'Демо режим',
-            policies: [
-              {
-                'type': InsuranceText.dms,
-                'date': '9 мая 2025',
-              },
-              {
-                'type': InsuranceText.antiOnko,
-                'date': '12 октября 2023',
-              },
-            ],
-          ),
-        ),
-        SizedBox(height: 54.h),
-        const CustomText(
-          text: InsuranceText.policies,
-          textStyle: ThemeTextInter.w700s16,
-        ),
-        SizedBox(height: 28.h),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Policy(
-              icon: InsuranceIcons.heartRate,
-              text: InsuranceText.health,
-            ),
-            Policy(
-              icon: InsuranceIcons.medicalInsurance,
-              text: InsuranceText.casco,
-            ),
-            Policy(
-              icon: InsuranceIcons.insurance,
-              text: InsuranceText.osago,
-            ),
-          ],
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -45,7 +45,7 @@ class PolicyInfo extends StatelessWidget {
             ],
           ),
           SizedBox(width: 14.h),
-          for (var pol in policy.policies)
+          for (final pol in policy.policies)
             SpacedColumn(
               space: 2,
               children: [
@@ -58,10 +58,8 @@ class PolicyInfo extends StatelessWidget {
                   textStyle: ThemeTextInter.w400s10
                       .copyWith(color: ThemeColors.black2),
                 ),
-                // if (pol.)
-                SizedBox(height: 12.h),
               ],
-            )
+            ),
         ],
       ),
     );
