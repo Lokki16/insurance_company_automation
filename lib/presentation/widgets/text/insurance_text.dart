@@ -34,4 +34,7 @@ class InsuranceText {
   static const enterValidEmail = 'enter_valid_email';
   static const enterYourPassword = 'enter_your_password';
   static const passwordShouldContain = 'password_should_contain';
+  static const loading = 'loading';
+  static const error = 'error';
+  static const noData = 'no_data';
 }

@@ -41,5 +41,8 @@ class English {
     InsuranceText.enterYourPassword: 'Enter your password',
     InsuranceText.passwordShouldContain:
         'Password should contain 6 characters!',
+    InsuranceText.loading: 'Loading...',
+    InsuranceText.error: 'Error!',
+    InsuranceText.noData: 'No data',
   };
 }

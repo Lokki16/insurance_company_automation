@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PolicyEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? fetch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_PolicyEventFetch value) fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_PolicyEventFetch value)? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_PolicyEventFetch value)? fetch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,34 +69,35 @@ class _$PolicyEventCopyWithImpl<$Res, $Val extends PolicyEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$_PolicyEventFetchCopyWith<$Res> {
+  factory _$$_PolicyEventFetchCopyWith(
+          _$_PolicyEventFetch value, $Res Function(_$_PolicyEventFetch) then) =
+      __$$_PolicyEventFetchCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$PolicyEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$_PolicyEventFetchCopyWithImpl<$Res>
+    extends _$PolicyEventCopyWithImpl<$Res, _$_PolicyEventFetch>
+    implements _$$_PolicyEventFetchCopyWith<$Res> {
+  __$$_PolicyEventFetchCopyWithImpl(
+      _$_PolicyEventFetch _value, $Res Function(_$_PolicyEventFetch) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_PolicyEventFetch implements _PolicyEventFetch {
+  const _$_PolicyEventFetch();
 
   @override
   String toString() {
-    return 'PolicyEvent.started()';
+    return 'PolicyEvent.fetch()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$_PolicyEventFetch);
   }
 
   @override
@@ -105,27 +106,27 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() fetch,
   }) {
-    return started();
+    return fetch();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? fetch,
   }) {
-    return started?.call();
+    return fetch?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? fetch,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (fetch != null) {
+      return fetch();
     }
     return orElse();
   }
@@ -133,67 +134,79 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_PolicyEventFetch value) fetch,
   }) {
-    return started(this);
+    return fetch(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_PolicyEventFetch value)? fetch,
   }) {
-    return started?.call(this);
+    return fetch?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_PolicyEventFetch value)? fetch,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (fetch != null) {
+      return fetch(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements PolicyEvent {
-  const factory _Started() = _$_Started;
+abstract class _PolicyEventFetch implements PolicyEvent {
+  const factory _PolicyEventFetch() = _$_PolicyEventFetch;
 }
 
 /// @nodoc
 mixin _$PolicyState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function()? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(_PolicyStateLoading value) loading,
+    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_PolicyStateError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PolicyStateLoading value)? loading,
+    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_PolicyStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_PolicyStateLoading value)? loading,
+    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_PolicyStateError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -218,34 +231,35 @@ class _$PolicyStateCopyWithImpl<$Res, $Val extends PolicyState>
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$_PolicyStateLoadingCopyWith<$Res> {
+  factory _$$_PolicyStateLoadingCopyWith(_$_PolicyStateLoading value,
+          $Res Function(_$_PolicyStateLoading) then) =
+      __$$_PolicyStateLoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$PolicyStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+class __$$_PolicyStateLoadingCopyWithImpl<$Res>
+    extends _$PolicyStateCopyWithImpl<$Res, _$_PolicyStateLoading>
+    implements _$$_PolicyStateLoadingCopyWith<$Res> {
+  __$$_PolicyStateLoadingCopyWithImpl(
+      _$_PolicyStateLoading _value, $Res Function(_$_PolicyStateLoading) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_PolicyStateLoading implements _PolicyStateLoading {
+  const _$_PolicyStateLoading();
 
   @override
   String toString() {
-    return 'PolicyState.initial()';
+    return 'PolicyState.loading()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$_PolicyStateLoading);
   }
 
   @override
@@ -254,27 +268,33 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function() error,
   }) {
-    return initial();
+    return loading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function()? error,
   }) {
-    return initial?.call();
+    return loading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function()? error,
     required TResult orElse(),
   }) {
-    if (initial != null) {
-      return initial();
+    if (loading != null) {
+      return loading();
     }
     return orElse();
   }
@@ -282,32 +302,288 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(_PolicyStateLoading value) loading,
+    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_PolicyStateError value) error,
   }) {
-    return initial(this);
+    return loading(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(_PolicyStateLoading value)? loading,
+    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_PolicyStateError value)? error,
   }) {
-    return initial?.call(this);
+    return loading?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_PolicyStateLoading value)? loading,
+    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_PolicyStateError value)? error,
     required TResult orElse(),
   }) {
-    if (initial != null) {
-      return initial(this);
+    if (loading != null) {
+      return loading(this);
     }
     return orElse();
   }
 }
 
-abstract class _Initial implements PolicyState {
-  const factory _Initial() = _$_Initial;
+abstract class _PolicyStateLoading implements PolicyState {
+  const factory _PolicyStateLoading() = _$_PolicyStateLoading;
+}
+
+/// @nodoc
+abstract class _$$_PolicyStateLoadedCopyWith<$Res> {
+  factory _$$_PolicyStateLoadedCopyWith(_$_PolicyStateLoaded value,
+          $Res Function(_$_PolicyStateLoaded) then) =
+      __$$_PolicyStateLoadedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({PolicyModel policyLoaded});
+}
+
+/// @nodoc
+class __$$_PolicyStateLoadedCopyWithImpl<$Res>
+    extends _$PolicyStateCopyWithImpl<$Res, _$_PolicyStateLoaded>
+    implements _$$_PolicyStateLoadedCopyWith<$Res> {
+  __$$_PolicyStateLoadedCopyWithImpl(
+      _$_PolicyStateLoaded _value, $Res Function(_$_PolicyStateLoaded) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? policyLoaded = null,
+  }) {
+    return _then(_$_PolicyStateLoaded(
+      policyLoaded: null == policyLoaded
+          ? _value.policyLoaded
+          : policyLoaded // ignore: cast_nullable_to_non_nullable
+              as PolicyModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_PolicyStateLoaded implements _PolicyStateLoaded {
+  const _$_PolicyStateLoaded({required this.policyLoaded});
+
+  @override
+  final PolicyModel policyLoaded;
+
+  @override
+  String toString() {
+    return 'PolicyState.loaded(policyLoaded: $policyLoaded)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_PolicyStateLoaded &&
+            (identical(other.policyLoaded, policyLoaded) ||
+                other.policyLoaded == policyLoaded));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, policyLoaded);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PolicyStateLoadedCopyWith<_$_PolicyStateLoaded> get copyWith =>
+      __$$_PolicyStateLoadedCopyWithImpl<_$_PolicyStateLoaded>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function() error,
+  }) {
+    return loaded(policyLoaded);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function()? error,
+  }) {
+    return loaded?.call(policyLoaded);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(policyLoaded);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PolicyStateLoading value) loading,
+    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_PolicyStateError value) error,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PolicyStateLoading value)? loading,
+    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_PolicyStateError value)? error,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PolicyStateLoading value)? loading,
+    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_PolicyStateError value)? error,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PolicyStateLoaded implements PolicyState {
+  const factory _PolicyStateLoaded({required final PolicyModel policyLoaded}) =
+      _$_PolicyStateLoaded;
+
+  PolicyModel get policyLoaded;
+  @JsonKey(ignore: true)
+  _$$_PolicyStateLoadedCopyWith<_$_PolicyStateLoaded> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_PolicyStateErrorCopyWith<$Res> {
+  factory _$$_PolicyStateErrorCopyWith(
+          _$_PolicyStateError value, $Res Function(_$_PolicyStateError) then) =
+      __$$_PolicyStateErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_PolicyStateErrorCopyWithImpl<$Res>
+    extends _$PolicyStateCopyWithImpl<$Res, _$_PolicyStateError>
+    implements _$$_PolicyStateErrorCopyWith<$Res> {
+  __$$_PolicyStateErrorCopyWithImpl(
+      _$_PolicyStateError _value, $Res Function(_$_PolicyStateError) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_PolicyStateError implements _PolicyStateError {
+  const _$_PolicyStateError();
+
+  @override
+  String toString() {
+    return 'PolicyState.error()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_PolicyStateError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function() error,
+  }) {
+    return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function()? error,
+  }) {
+    return error?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PolicyStateLoading value) loading,
+    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_PolicyStateError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PolicyStateLoading value)? loading,
+    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_PolicyStateError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PolicyStateLoading value)? loading,
+    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_PolicyStateError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PolicyStateError implements PolicyState {
+  const factory _PolicyStateError() = _$_PolicyStateError;
 }

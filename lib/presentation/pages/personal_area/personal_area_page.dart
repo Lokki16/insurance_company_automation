@@ -1,3 +1,4 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insurance_company_automation/presentation/template/template.dart';
 
 class PersonalAreaPage extends StatelessWidget {
@@ -5,12 +6,21 @@ class PersonalAreaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultBody(
-      title: InsuranceText.personalArea,
-      topPadding: 54,
-      horizontalPadding: 7,
-      footer: _Footer(),
-      child: _Child(),
+    return BlocBuilder<PolicyBloc, PolicyState>(
+      builder: (context, state) {
+        return DefaultBody(
+          title: InsuranceText.personalArea,
+          topPadding: 54,
+          horizontalPadding: 7,
+          footer: const _Footer(),
+          child: state.when(
+            loading: () => const _Loading(),
+            loaded: (policyLoaded) =>
+                policyLoaded == null ? const _Loaded() : const _NoData(),
+            error: () => const _Error(),
+          ),
+        );
+      },
     );
   }
 }
@@ -31,8 +41,30 @@ class _Footer extends StatelessWidget {
   }
 }
 
-class _Child extends StatelessWidget {
-  const _Child({Key? key}) : super(key: key);
+class _Loading extends StatelessWidget {
+  const _Loading({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: SpacedColumn(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        space: 5,
+        children: [
+          CircularProgressIndicator(
+            strokeWidth: 2.w,
+            color: ThemeColors.orange1,
+          ),
+          const CustomText(text: InsuranceText.loading),
+        ],
+      ),
+    );
+  }
+}
+
+class _Loaded extends StatelessWidget {
+  const _Loaded({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -95,6 +127,34 @@ class _Child extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+}
+
+class _NoData extends StatelessWidget {
+  const _NoData({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [CustomText(text: InsuranceText.noData)],
+      ),
+    );
+  }
+}
+
+class _Error extends StatelessWidget {
+  const _Error({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [CustomText(text: InsuranceText.error)],
+      ),
     );
   }
 }

@@ -40,5 +40,8 @@ class Russian {
     InsuranceText.enterValidEmail: 'Введите действующий email',
     InsuranceText.enterYourPassword: 'Введите ваш пароль',
     InsuranceText.passwordShouldContain: 'Пароль должен содержать 6 символов!',
+    InsuranceText.loading: 'Идет загрузка...',
+    InsuranceText.error: 'Ошибка!',
+    InsuranceText.noData: 'Нет данных',
   };
 }
