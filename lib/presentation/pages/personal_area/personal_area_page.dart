@@ -1,8 +1,24 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insurance_company_automation/presentation/template/template.dart';
 
-class PersonalAreaPage extends StatelessWidget {
+class PersonalAreaPage extends StatefulWidget {
   const PersonalAreaPage({super.key});
+
+  @override
+  State<PersonalAreaPage> createState() => _PersonalAreaPageState();
+}
+
+class _PersonalAreaPageState extends State<PersonalAreaPage> {
+  List<PolicyModel> listOfPolicy = [];
+
+  @override
+  void initState() {
+    if (listOfPolicy.isEmpty) {
+      context.read<PolicyBloc>().add(const PolicyEvent.fetch());
+    }
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +31,12 @@ class PersonalAreaPage extends StatelessWidget {
           footer: const _Footer(),
           child: state.when(
             loading: () => const _Loading(),
-            loaded: (policyLoaded) =>
-                policyLoaded == null ? const _Loaded() : const _NoData(),
+            loaded: (policyLoaded) {
+              listOfPolicy = policyLoaded.listOfPolicy;
+              return listOfPolicy.isNotEmpty
+                  ? _Loaded(listOfPolicy: policyLoaded.listOfPolicy)
+                  : const _NoData();
+            },
             error: () => const _Error(),
           ),
         );
@@ -64,7 +84,9 @@ class _Loading extends StatelessWidget {
 }
 
 class _Loaded extends StatelessWidget {
-  const _Loaded({Key? key}) : super(key: key);
+  final List<PolicyModel> listOfPolicy;
+
+  const _Loaded({Key? key, required this.listOfPolicy}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -22,7 +22,7 @@ class PolicyBloc extends Bloc<PolicyEvent, PolicyState> {
     emit(const PolicyState.loading());
 
     try {
-      PolicyModel policyLoaded = await policyRepository.getPolicy();
+      ListPolicyModel policyLoaded = await policyRepository.getPolicy();
       emit(PolicyState.loaded(policyLoaded: policyLoaded));
     } catch (_) {
       emit(const PolicyState.error());

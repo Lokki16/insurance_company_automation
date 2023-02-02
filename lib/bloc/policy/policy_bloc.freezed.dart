@@ -169,21 +169,21 @@ mixin _$PolicyState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function(ListPolicyModel policyLoaded) loaded,
     required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function(ListPolicyModel policyLoaded)? loaded,
     TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function(ListPolicyModel policyLoaded)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) =>
@@ -191,21 +191,21 @@ mixin _$PolicyState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PolicyStateLoading value) loading,
-    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_ListPolicyStateLoaded value) loaded,
     required TResult Function(_PolicyStateError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PolicyStateLoading value)? loading,
-    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_ListPolicyStateLoaded value)? loaded,
     TResult? Function(_PolicyStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PolicyStateLoading value)? loading,
-    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_ListPolicyStateLoaded value)? loaded,
     TResult Function(_PolicyStateError value)? error,
     required TResult orElse(),
   }) =>
@@ -269,7 +269,7 @@ class _$_PolicyStateLoading implements _PolicyStateLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function(ListPolicyModel policyLoaded) loaded,
     required TResult Function() error,
   }) {
     return loading();
@@ -279,7 +279,7 @@ class _$_PolicyStateLoading implements _PolicyStateLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function(ListPolicyModel policyLoaded)? loaded,
     TResult? Function()? error,
   }) {
     return loading?.call();
@@ -289,7 +289,7 @@ class _$_PolicyStateLoading implements _PolicyStateLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function(ListPolicyModel policyLoaded)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -303,7 +303,7 @@ class _$_PolicyStateLoading implements _PolicyStateLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PolicyStateLoading value) loading,
-    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_ListPolicyStateLoaded value) loaded,
     required TResult Function(_PolicyStateError value) error,
   }) {
     return loading(this);
@@ -313,7 +313,7 @@ class _$_PolicyStateLoading implements _PolicyStateLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PolicyStateLoading value)? loading,
-    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_ListPolicyStateLoaded value)? loaded,
     TResult? Function(_PolicyStateError value)? error,
   }) {
     return loading?.call(this);
@@ -323,7 +323,7 @@ class _$_PolicyStateLoading implements _PolicyStateLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PolicyStateLoading value)? loading,
-    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_ListPolicyStateLoaded value)? loaded,
     TResult Function(_PolicyStateError value)? error,
     required TResult orElse(),
   }) {
@@ -339,20 +339,20 @@ abstract class _PolicyStateLoading implements PolicyState {
 }
 
 /// @nodoc
-abstract class _$$_PolicyStateLoadedCopyWith<$Res> {
-  factory _$$_PolicyStateLoadedCopyWith(_$_PolicyStateLoaded value,
-          $Res Function(_$_PolicyStateLoaded) then) =
-      __$$_PolicyStateLoadedCopyWithImpl<$Res>;
+abstract class _$$_ListPolicyStateLoadedCopyWith<$Res> {
+  factory _$$_ListPolicyStateLoadedCopyWith(_$_ListPolicyStateLoaded value,
+          $Res Function(_$_ListPolicyStateLoaded) then) =
+      __$$_ListPolicyStateLoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({PolicyModel policyLoaded});
+  $Res call({ListPolicyModel policyLoaded});
 }
 
 /// @nodoc
-class __$$_PolicyStateLoadedCopyWithImpl<$Res>
-    extends _$PolicyStateCopyWithImpl<$Res, _$_PolicyStateLoaded>
-    implements _$$_PolicyStateLoadedCopyWith<$Res> {
-  __$$_PolicyStateLoadedCopyWithImpl(
-      _$_PolicyStateLoaded _value, $Res Function(_$_PolicyStateLoaded) _then)
+class __$$_ListPolicyStateLoadedCopyWithImpl<$Res>
+    extends _$PolicyStateCopyWithImpl<$Res, _$_ListPolicyStateLoaded>
+    implements _$$_ListPolicyStateLoadedCopyWith<$Res> {
+  __$$_ListPolicyStateLoadedCopyWithImpl(_$_ListPolicyStateLoaded _value,
+      $Res Function(_$_ListPolicyStateLoaded) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -360,22 +360,22 @@ class __$$_PolicyStateLoadedCopyWithImpl<$Res>
   $Res call({
     Object? policyLoaded = null,
   }) {
-    return _then(_$_PolicyStateLoaded(
+    return _then(_$_ListPolicyStateLoaded(
       policyLoaded: null == policyLoaded
           ? _value.policyLoaded
           : policyLoaded // ignore: cast_nullable_to_non_nullable
-              as PolicyModel,
+              as ListPolicyModel,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_PolicyStateLoaded implements _PolicyStateLoaded {
-  const _$_PolicyStateLoaded({required this.policyLoaded});
+class _$_ListPolicyStateLoaded implements _ListPolicyStateLoaded {
+  const _$_ListPolicyStateLoaded({required this.policyLoaded});
 
   @override
-  final PolicyModel policyLoaded;
+  final ListPolicyModel policyLoaded;
 
   @override
   String toString() {
@@ -386,7 +386,7 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PolicyStateLoaded &&
+            other is _$_ListPolicyStateLoaded &&
             (identical(other.policyLoaded, policyLoaded) ||
                 other.policyLoaded == policyLoaded));
   }
@@ -397,15 +397,15 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PolicyStateLoadedCopyWith<_$_PolicyStateLoaded> get copyWith =>
-      __$$_PolicyStateLoadedCopyWithImpl<_$_PolicyStateLoaded>(
+  _$$_ListPolicyStateLoadedCopyWith<_$_ListPolicyStateLoaded> get copyWith =>
+      __$$_ListPolicyStateLoadedCopyWithImpl<_$_ListPolicyStateLoaded>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function(ListPolicyModel policyLoaded) loaded,
     required TResult Function() error,
   }) {
     return loaded(policyLoaded);
@@ -415,7 +415,7 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function(ListPolicyModel policyLoaded)? loaded,
     TResult? Function()? error,
   }) {
     return loaded?.call(policyLoaded);
@@ -425,7 +425,7 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function(ListPolicyModel policyLoaded)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -439,7 +439,7 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PolicyStateLoading value) loading,
-    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_ListPolicyStateLoaded value) loaded,
     required TResult Function(_PolicyStateError value) error,
   }) {
     return loaded(this);
@@ -449,7 +449,7 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PolicyStateLoading value)? loading,
-    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_ListPolicyStateLoaded value)? loaded,
     TResult? Function(_PolicyStateError value)? error,
   }) {
     return loaded?.call(this);
@@ -459,7 +459,7 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PolicyStateLoading value)? loading,
-    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_ListPolicyStateLoaded value)? loaded,
     TResult Function(_PolicyStateError value)? error,
     required TResult orElse(),
   }) {
@@ -470,13 +470,13 @@ class _$_PolicyStateLoaded implements _PolicyStateLoaded {
   }
 }
 
-abstract class _PolicyStateLoaded implements PolicyState {
-  const factory _PolicyStateLoaded({required final PolicyModel policyLoaded}) =
-      _$_PolicyStateLoaded;
+abstract class _ListPolicyStateLoaded implements PolicyState {
+  const factory _ListPolicyStateLoaded(
+      {required final ListPolicyModel policyLoaded}) = _$_ListPolicyStateLoaded;
 
-  PolicyModel get policyLoaded;
+  ListPolicyModel get policyLoaded;
   @JsonKey(ignore: true)
-  _$$_PolicyStateLoadedCopyWith<_$_PolicyStateLoaded> get copyWith =>
+  _$$_ListPolicyStateLoadedCopyWith<_$_ListPolicyStateLoaded> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -519,7 +519,7 @@ class _$_PolicyStateError implements _PolicyStateError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(PolicyModel policyLoaded) loaded,
+    required TResult Function(ListPolicyModel policyLoaded) loaded,
     required TResult Function() error,
   }) {
     return error();
@@ -529,7 +529,7 @@ class _$_PolicyStateError implements _PolicyStateError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(PolicyModel policyLoaded)? loaded,
+    TResult? Function(ListPolicyModel policyLoaded)? loaded,
     TResult? Function()? error,
   }) {
     return error?.call();
@@ -539,7 +539,7 @@ class _$_PolicyStateError implements _PolicyStateError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(PolicyModel policyLoaded)? loaded,
+    TResult Function(ListPolicyModel policyLoaded)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -553,7 +553,7 @@ class _$_PolicyStateError implements _PolicyStateError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PolicyStateLoading value) loading,
-    required TResult Function(_PolicyStateLoaded value) loaded,
+    required TResult Function(_ListPolicyStateLoaded value) loaded,
     required TResult Function(_PolicyStateError value) error,
   }) {
     return error(this);
@@ -563,7 +563,7 @@ class _$_PolicyStateError implements _PolicyStateError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PolicyStateLoading value)? loading,
-    TResult? Function(_PolicyStateLoaded value)? loaded,
+    TResult? Function(_ListPolicyStateLoaded value)? loaded,
     TResult? Function(_PolicyStateError value)? error,
   }) {
     return error?.call(this);
@@ -573,7 +573,7 @@ class _$_PolicyStateError implements _PolicyStateError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PolicyStateLoading value)? loading,
-    TResult Function(_PolicyStateLoaded value)? loaded,
+    TResult Function(_ListPolicyStateLoaded value)? loaded,
     TResult Function(_PolicyStateError value)? error,
     required TResult orElse(),
   }) {
