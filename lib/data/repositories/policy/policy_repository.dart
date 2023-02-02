@@ -4,7 +4,7 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 
 class PolicyRepository {
   final url =
-      'https://github.com/Lokki16/insurance_company_automation/blob/main/test.json';
+      'my-json-server.typicode.com/Lokki16/insurance_company_automation/policy';
 
   Future<PolicyModel> getPolicy() async {
     try {
