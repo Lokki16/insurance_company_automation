@@ -45,23 +45,34 @@ class PolicyInfo extends StatelessWidget {
             ],
           ),
           SizedBox(width: 14.h),
-          for (final pol in policy.policies)
-            SpacedColumn(
-              space: 2,
-              children: [
-                CustomText(
-                  text: pol['type'].toString(),
-                  textStyle: ThemeTextInter.w400s14,
-                ),
-                CustomText(
-                  text: "действителен до ${pol['date']}",
-                  textStyle: ThemeTextInter.w400s10
-                      .copyWith(color: ThemeColors.black2),
-                ),
-              ],
-            ),
+          SpacedColumn(children: _buildPolicies()),
         ],
       ),
     );
+  }
+
+  List<Widget> _buildPolicies() {
+    List<Widget> widgets = [];
+
+    for (final pol in policy.policies) {
+      widgets.add(SpacedColumn(
+        space: 2,
+        children: [
+          CustomText(
+            text: pol['type'].toString(),
+            textStyle: ThemeTextInter.w400s14,
+          ),
+          CustomText(
+            text: "действителен до ${pol['date']}",
+            textStyle:
+                ThemeTextInter.w400s10.copyWith(color: ThemeColors.black2),
+          ),
+        ],
+      ));
+      widgets.add(SizedBox(height: 14.h));
+    }
+    widgets.removeLast();
+
+    return widgets;
   }
 }

@@ -7,12 +7,14 @@ export 'package:equatable/equatable.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 
-// themes
-export 'themes/theme_colors.dart';
-export 'themes/theme_data.dart';
-export 'themes/theme_shadows.dart';
-export 'themes/theme_size_style.dart';
-export 'themes/theme_text_style.dart';
+// theme
+export 'theme/theme_data.dart';
+
+// base
+export 'base/theme_colors.dart';
+export 'base/theme_shadows.dart';
+export 'base/theme_size_style.dart';
+export 'base/theme_text_style.dart';
 
 // common
 export '../../utils/common/constants.dart';

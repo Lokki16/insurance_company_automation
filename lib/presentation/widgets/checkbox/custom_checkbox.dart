@@ -18,16 +18,7 @@ class CustomCheckbox extends StatelessWidget {
       space: 10,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Checkbox(
-          value: value,
-          onChanged: onChanged,
-          checkColor: ThemeColors.orange2,
-          fillColor: MaterialStateProperty.all(ThemeColors.transparent),
-          side: MaterialStateBorderSide.resolveWith(
-              (states) => BorderSide(width: 2.w, color: ThemeColors.orange2)),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.r)),
-        ),
+        Checkbox(value: value, onChanged: onChanged),
         Flexible(
           child: CustomText(
             text: text,

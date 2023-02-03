@@ -17,4 +17,7 @@ class ThemeColors {
   // orange
   static const orange1 = Color(0xFFFD5D00);
   static const orange2 = Color(0xFFFD6300);
+
+  // red
+  static const red1 = Color(0xFFFECACA);
 }

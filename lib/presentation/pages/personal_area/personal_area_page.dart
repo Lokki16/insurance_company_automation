@@ -27,7 +27,6 @@ class _PersonalAreaPageState extends State<PersonalAreaPage> {
         return DefaultBody(
           title: InsuranceText.personalArea,
           horizontalPadding: 7,
-          footer: _Footer(),
           child: state.when(
             loading: () => const _Loading(),
             loaded: (policyLoaded) {
@@ -40,22 +39,6 @@ class _PersonalAreaPageState extends State<PersonalAreaPage> {
           ),
         );
       },
-    );
-  }
-}
-
-class _Footer extends StatelessWidget {
-  const _Footer({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SpacedColumn(
-      children: [
-        CustomButton(
-          buttonText: InsuranceText.buy,
-          onPressed: () {},
-        ),
-      ],
     );
   }
 }
@@ -118,6 +101,14 @@ class _Loaded extends StatelessWidget {
                 text: InsuranceText.osago,
               ),
             ],
+          ),
+          SizedBox(height: 67.h),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CustomButton(
+              buttonText: InsuranceText.buy,
+              onPressed: () {},
+            ),
           ),
         ],
       ),

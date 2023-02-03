@@ -8,28 +8,28 @@ class InsuranceAppTheme {
         }),
         brightness: Brightness.light,
         scaffoldBackgroundColor: ThemeColors.white2,
-        // colorScheme: _colorScheme(),
+        colorScheme: _colorScheme(),
         primaryColor: ThemeColors.orange1,
         appBarTheme: _appBarTheme(),
         bottomSheetTheme:
             const BottomSheetThemeData(backgroundColor: Colors.transparent),
-        // progressIndicatorTheme: _progressIndicatorTheme(),
+        progressIndicatorTheme: _progressIndicatorTheme(),
         buttonTheme: _buttonTheme(),
         textButtonTheme: _textButtonTheme(),
-        // checkboxTheme: _checkboxTheme(),
+        checkboxTheme: _checkboxTheme(),
       );
 
   static ThemeData get darkTheme => ThemeData();
 }
 
-// ColorScheme _colorScheme() {
-//   return ColorScheme.fromSwatch(
-//     accentColor: ThemeColors.,
-//     backgroundColor: ThemeColors.,
-//     cardColor: ThemeColors.,
-//     errorColor: ThemeColors.,
-//   );
-// }
+ColorScheme _colorScheme() {
+  return ColorScheme.fromSwatch(
+    accentColor: ThemeColors.white1,
+    backgroundColor: ThemeColors.white2,
+    cardColor: ThemeColors.orange1,
+    errorColor: ThemeColors.red1,
+  );
+}
 
 AppBarTheme _appBarTheme() {
   return AppBarTheme(
@@ -39,9 +39,9 @@ AppBarTheme _appBarTheme() {
   );
 }
 
-// ProgressIndicatorThemeData _progressIndicatorTheme() {
-//   return const ProgressIndicatorThemeData(color: ThemeColors.);
-// }
+ProgressIndicatorThemeData _progressIndicatorTheme() {
+  return const ProgressIndicatorThemeData(color: ThemeColors.orange1);
+}
 
 ButtonThemeData _buttonTheme() {
   return ButtonThemeData(
@@ -51,13 +51,16 @@ ButtonThemeData _buttonTheme() {
   );
 }
 
-// CheckboxThemeData _checkboxTheme() {
-//   return CheckboxThemeData(
-//     visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-//     side: BorderSide(width: 1.w, color: ThemeColors.),
-//     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.r)),
-//   );
-// }
+CheckboxThemeData _checkboxTheme() {
+  return CheckboxThemeData(
+    visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
+    checkColor: MaterialStateProperty.all(ThemeColors.orange2),
+    fillColor: MaterialStateProperty.all(ThemeColors.transparent),
+    side: MaterialStateBorderSide.resolveWith(
+        (states) => BorderSide(width: 2.w, color: ThemeColors.orange2)),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.r)),
+  );
+}
 
 TextButtonThemeData _textButtonTheme() {
   return TextButtonThemeData(style: ButtonStyle(
