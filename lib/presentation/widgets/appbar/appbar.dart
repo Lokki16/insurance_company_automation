@@ -26,10 +26,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   Widget? _buildLeading() {
     if (back) {
-      return CustomIcon(
-        icon: InsuranceIcons.arrowLeft,
-        color: ThemeColors.orange1,
+      return IconButton(
         onPressed: () => Get.back(),
+        icon: const CustomIcon(
+          icon: InsuranceIcons.arrowLeft,
+          color: ThemeColors.orange1,
+        ),
       );
     }
     return null;

@@ -29,10 +29,11 @@ class PolicyInfo extends StatelessWidget {
           SizedBox(height: 30.h),
           Row(
             children: [
-              CustomIcon(
-                icon: policy.policyType == 'car'
-                    ? InsuranceIcons.car
-                    : InsuranceIcons.heartRate,
+              CustomImage(
+                image: policy.policyType == 'car'
+                    ? InsuranceImages.car
+                    : InsuranceImages.heartRate,
+                // color: ThemeColors.black4,
                 size: 13,
               ),
               SizedBox(width: 5.w),

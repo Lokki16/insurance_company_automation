@@ -2,7 +2,7 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 
 class Policy extends StatelessWidget {
   final String text;
-  final InsuranceIcons icon;
+  final InsuranceImages icon;
 
   const Policy({super.key, required this.text, required this.icon});
 
@@ -15,10 +15,16 @@ class Policy extends StatelessWidget {
         color: ThemeColors.white1,
         borderRadius: BorderRadius.circular(15.r),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      child: SpacedRow(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        space: 4,
         children: [
-          CustomIcon(icon: icon, size: 18),
+          CustomImage(
+            image: icon,
+            // color: ThemeColors.black4,
+            size: 18,
+          ),
           CustomText(text: text, textStyle: ThemeTextInter.w400s12),
         ],
       ),

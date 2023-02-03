@@ -89,15 +89,15 @@ class _Loaded extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Policy(
-                icon: InsuranceIcons.heartRate,
+                icon: InsuranceImages.heartRate,
                 text: InsuranceText.health,
               ),
               Policy(
-                icon: InsuranceIcons.medicalInsurance,
+                icon: InsuranceImages.medicalInsurance,
                 text: InsuranceText.casco,
               ),
               Policy(
-                icon: InsuranceIcons.insurance,
+                icon: InsuranceImages.insuranceIco,
                 text: InsuranceText.osago,
               ),
             ],
