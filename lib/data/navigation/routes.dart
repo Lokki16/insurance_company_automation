@@ -8,6 +8,8 @@ class AppRoutes {
   static const String routeToPersonalAreaPage = '/personal_area';
   static const String routeToSettingsPage = '/settings_page';
   static const String routeToProfilePage = '/profile_page';
+  static const String routeToLanguagesPage = '/languages_page';
+  static const String routeToThemesPage = '/themes_page';
 
   static dynamic getRoutes = {
     routeToWelcomePage: (context) => const WelcomePage(),
@@ -17,5 +19,7 @@ class AppRoutes {
     routeToPersonalAreaPage: (context) => const PersonalAreaPage(),
     routeToSettingsPage: (context) => const SettingsPage(),
     routeToProfilePage: (context) => const ProfilePage(),
+    routeToLanguagesPage: (context) => const LanguagesPage(),
+    routeToThemesPage: (context) => const ThemesPage(),
   };
 }

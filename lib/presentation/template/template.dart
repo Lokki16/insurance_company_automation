@@ -72,4 +72,6 @@ export 'package:insurance_company_automation/presentation/pages/authorization/re
 export 'package:insurance_company_automation/presentation/pages/authorization/forgot_password_page.dart';
 export 'package:insurance_company_automation/presentation/pages/personal_area/personal_area_page.dart';
 export 'package:insurance_company_automation/presentation/pages/settings/settings_page.dart';
+export 'package:insurance_company_automation/presentation/pages/settings/languages_page.dart';
+export 'package:insurance_company_automation/presentation/pages/settings/themes_page.dart';
 export 'package:insurance_company_automation/presentation/pages/profile/profile_page.dart';

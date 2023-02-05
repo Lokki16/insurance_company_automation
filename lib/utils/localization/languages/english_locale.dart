@@ -47,5 +47,13 @@ class English {
     InsuranceText.profile: 'Profile',
     InsuranceText.signOut: 'Sign out',
     InsuranceText.settings: 'Settings',
+    InsuranceText.changeLanguage: 'Change language',
+    InsuranceText.changeTheme: 'Change theme',
+    InsuranceText.languages: 'Languages',
+    InsuranceText.russian: 'Russian',
+    InsuranceText.english: 'English',
+    InsuranceText.themes: 'Themes',
+    InsuranceText.light: 'Light',
+    InsuranceText.dark: 'Dark',
   };
 }

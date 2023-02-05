@@ -53,6 +53,7 @@ class PopupMenu extends StatelessWidget {
             Get.toNamed(AppRoutes.routeToSettingsPage);
             break;
           case _MenuValues.signOut:
+            Get.toNamed(AppRoutes.routeToWelcomePage);
             break;
         }
       },

@@ -8,8 +8,22 @@ class SettingsPage extends StatelessWidget {
     return DefaultBody(
       title: InsuranceText.settings,
       back: true,
-      child: Column(
-        children: const [],
+      child: SpacedColumn(
+        space: 5.h,
+        children: [
+          CustomButton(
+            buttonText: InsuranceText.changeLanguage,
+            onPressed: () => Get.toNamed(AppRoutes.routeToLanguagesPage),
+          ),
+          CustomButton(
+            buttonText: InsuranceText.changeTheme,
+            onPressed: () => Get.toNamed(AppRoutes.routeToThemesPage),
+          ),
+          CustomButton(
+            buttonText: InsuranceText.signOut,
+            onPressed: () => Get.toNamed(AppRoutes.routeToWelcomePage),
+          ),
+        ],
       ),
     );
   }

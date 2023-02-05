@@ -40,4 +40,12 @@ class InsuranceText {
   static const profile = 'profile';
   static const signOut = 'sign_out';
   static const settings = 'settings';
+  static const changeLanguage = 'change_language';
+  static const changeTheme = 'change_theme';
+  static const languages = 'languages';
+  static const russian = 'russian';
+  static const english = 'english';
+  static const themes = 'themes';
+  static const light = 'light';
+  static const dark = 'dark';
 }

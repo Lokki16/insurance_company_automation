@@ -46,5 +46,13 @@ class Russian {
     InsuranceText.profile: 'Профиль',
     InsuranceText.signOut: 'Выйти',
     InsuranceText.settings: 'Настройки',
+    InsuranceText.changeLanguage: 'Изменить язык',
+    InsuranceText.changeTheme: 'Изменить тему',
+    InsuranceText.languages: 'Языки',
+    InsuranceText.russian: 'Русский',
+    InsuranceText.english: 'Английский',
+    InsuranceText.themes: 'Темы',
+    InsuranceText.light: 'Светлая',
+    InsuranceText.dark: 'Темная',
   };
 }
