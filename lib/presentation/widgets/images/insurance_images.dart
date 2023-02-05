@@ -4,6 +4,7 @@ class InsuranceImages {
   const InsuranceImages._(this.name);
 
   static const InsuranceImages insurance = InsuranceImages._('insurance');
+
   static const InsuranceImages car = InsuranceImages._('car');
   static const InsuranceImages heartRate = InsuranceImages._('heart-rate');
   static const InsuranceImages insuranceIco =

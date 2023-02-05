@@ -26,6 +26,7 @@ class _PersonalAreaPageState extends State<PersonalAreaPage> {
       builder: (context, state) {
         return DefaultBody(
           title: InsuranceText.personalArea,
+          popupMenu: true,
           horizontalPadding: 7,
           child: state.when(
             loading: () => const _Loading(),

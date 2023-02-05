@@ -37,4 +37,7 @@ class InsuranceText {
   static const loading = 'loading';
   static const error = 'error';
   static const noData = 'no_data';
+  static const profile = 'profile';
+  static const signOut = 'sign_out';
+  static const settings = 'settings';
 }

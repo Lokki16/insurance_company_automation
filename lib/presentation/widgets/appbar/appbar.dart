@@ -3,11 +3,13 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool back;
+  final bool popupMenu;
 
   const CustomAppBar({
     super.key,
     required this.title,
     required this.back,
+    required this.popupMenu,
   });
 
   @override
@@ -17,7 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: ThemeColors.white2,
       centerTitle: true,
       leading: _buildLeading(),
-      actions: const [],
+      actions: _buildActions(),
     );
   }
 
@@ -35,5 +37,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       );
     }
     return null;
+  }
+
+  List<Widget>? _buildActions() {
+    return [
+      if (popupMenu) const PopupMenu(),
+    ];
   }
 }

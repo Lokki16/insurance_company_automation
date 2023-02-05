@@ -43,5 +43,8 @@ class Russian {
     InsuranceText.loading: 'Идет загрузка...',
     InsuranceText.error: 'Ошибка!',
     InsuranceText.noData: 'Нет данных',
+    InsuranceText.profile: 'Профиль',
+    InsuranceText.signOut: 'Выйти',
+    InsuranceText.settings: 'Настройки',
   };
 }

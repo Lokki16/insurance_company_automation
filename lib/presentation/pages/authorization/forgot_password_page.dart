@@ -5,6 +5,11 @@ class ForgotPasswordPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return DefaultBody(
+      back: true,
+      child: Column(
+        children: const [],
+      ),
+    );
   }
 }

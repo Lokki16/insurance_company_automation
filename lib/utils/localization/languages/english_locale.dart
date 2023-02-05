@@ -44,5 +44,8 @@ class English {
     InsuranceText.loading: 'Loading...',
     InsuranceText.error: 'Error!',
     InsuranceText.noData: 'No data',
+    InsuranceText.profile: 'Profile',
+    InsuranceText.signOut: 'Sign out',
+    InsuranceText.settings: 'Settings',
   };
 }

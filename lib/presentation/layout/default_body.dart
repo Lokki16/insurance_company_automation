@@ -3,6 +3,7 @@ import 'package:insurance_company_automation/presentation/template/template.dart
 class DefaultBody extends StatelessWidget {
   final String title;
   final bool back;
+  final bool popupMenu;
   final double topPadding;
   final double bottomPadding;
   final double horizontalPadding;
@@ -14,6 +15,7 @@ class DefaultBody extends StatelessWidget {
     super.key,
     this.title = '',
     this.back = false,
+    this.popupMenu = false,
     this.topPadding = 0,
     this.bottomPadding = 0,
     this.horizontalPadding = 16,
@@ -29,7 +31,7 @@ class DefaultBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(title: title, back: back),
+      appBar: CustomAppBar(title: title, back: back, popupMenu: popupMenu),
       body: Padding(
         padding: EdgeInsets.only(
           top: topPadding.h,

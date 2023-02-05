@@ -1,13 +1,14 @@
 import 'package:insurance_company_automation/presentation/template/template.dart';
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return DefaultBody(
-      title: InsuranceText.settings,
+      title: InsuranceText.profile,
       back: true,
+      popupMenu: true,
       child: Column(
         children: const [],
       ),
