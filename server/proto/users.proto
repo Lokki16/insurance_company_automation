@@ -1,0 +1,91 @@
+syntax = 'proto3';
+
+service GrpcUsers {
+  rpc getUser(GetUserRequest) returns (GetUserResponse);
+  rpc createUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc updateUser(UpdateUserRequest) returns (UpdateUserResponse);
+  rpc deleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+  rpc changePassword(PasswordChangeRequest) returns (PasswordResponse);
+  rpc confirmPassword(PasswordConfirmRequest) returns (PasswordResponse);
+}
+
+message GetUserRequest {
+  int32 id = 1;
+  string name = 2;
+  string surname = 3;
+  string patronymic = 4;
+  string email = 5;
+  string phoneNumber = 6;
+  string dateCreation = 9;
+}
+
+message GetUserResponse {
+  int32 id = 1;
+  string dateUpdated = 2;
+  string dateDeleted = 3;
+}
+
+message CreateUserRequest {
+  int32 id = 1;
+  string name = 2;
+  string surname = 3;
+  string patronymic = 4;
+  string email = 5;
+  string phoneNumber = 6;
+  string password = 7;
+  string profilePicture = 8;
+  string dateCreated = 9;
+}
+
+message CreateUserResponse {
+  int32 id = 1;
+  string name = 2;
+  string surname = 3;
+  string patronymic = 4;
+  string email = 5;
+  string phoneNumber = 6;
+  string password = 7;
+  string profilePicture = 8;
+  string dateCreated = 9;
+}
+
+message UpdateUserRequest {
+  int32 id = 1;
+  string name = 2;
+  string surname = 3;
+  string patronymic = 4;
+  string email = 5;
+  string phoneNumber = 6;
+  string profilePicture = 7;
+}
+
+message UpdateUserResponse {
+  int32 id = 1;
+  string name = 2;
+  string surname = 3;
+  string patronymic = 4;
+  string email = 5;
+  string phoneNumber = 6;
+  string profilePicture = 7;
+  string dateUpdated = 8;
+}
+
+message DeleteUserRequest {
+  int32 id = 1;
+  string dateDeleted = 2;
+}
+
+message DeleteUserResponse { bool isDeleted = 1; }
+
+message PasswordChangeRequest {
+  int32 userId = 3;
+  string oldPassword = 1;
+  string newPassword = 2;
+}
+
+message PasswordConfirmRequest {
+  int32 userId = 1;
+  string password = 2;
+}
+
+message PasswordResponse { bool ok = 1; }

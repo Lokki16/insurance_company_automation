@@ -1,0 +1,24 @@
+syntax = 'proto3';
+
+service GrpcPolicies {
+  rpc getPolisy(GetPolisiesRequest) returns (GetPolisiesResponse);
+  rpc createPolisy(CreatePolisiesRequest) returns (CreatePolisiesResponse);
+  rpc updatePolisy(UpdatePolisiesRequest) returns (UpdatePolisiesResponse);
+  rpc deletePolisy(DeletePolisiesRequest) returns (DeletePolisiesResponse);
+}
+
+message GetPolisiesRequest {}
+
+message GetPolisiesResponse {}
+
+message CreatePolisiesRequest {}
+
+message CreatePolisiesResponse {}
+
+message UpdatePolisiesRequest {}
+
+message UpdatePolisiesResponse {}
+
+message DeletePolisiesRequest {}
+
+message DeletePolisiesResponse {}
