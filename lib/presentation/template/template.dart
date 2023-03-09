@@ -8,6 +8,7 @@ export 'package:formz/formz.dart';
 export 'package:equatable/equatable.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:cached_network_image/cached_network_image.dart';
+export 'package:firebase_auth/firebase_auth.dart';
 
 // theme
 export 'theme/theme_data.dart';

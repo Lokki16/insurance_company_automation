@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+service GrpcSynchronization {
+  rpc getUsersSynh(MainUserRequest) returns (DataDBResponse) {};
+  rpc Sync(UsersRequest) returns (UsersResponse);
+}
+
+message UserRequest {
+  int32 userId = 1;
+  string updatedDate = 2;
+}
+
+message UsersRequest {
+  int32 mainUser = 1;
+  repeated UserRequest usersForUpdate = 2;
+}
+
+message MainUserRequest { UsersRequest users = 1; }
+
+message SynhUser {
+  string name = 1;
+  int32 user_id = 2;
+  string email = 3;
+  string created_date = 4;
+  string picture = 5;
+  string deleted_date = 6;
+  string update_date = 7;
+}
+
+message UsersResponse {
+  repeated SynhUser usersNew = 1;
+  repeated SynhUser usersUpdated = 2;
+}
+
+message DataDBResponse { UsersResponse users = 1; }

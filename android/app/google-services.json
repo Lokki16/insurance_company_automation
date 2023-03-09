@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "384645721151",
+    "project_id": "insurance-66148",
+    "storage_bucket": "insurance-66148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384645721151:android:a80506fbaf6ef1ac065c8a",
+        "android_client_info": {
+          "package_name": "com.example.insurance_company_automation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384645721151-otv5maphs27m9pg17ig5f7ieuk986mq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOS97_mxbcHykKggbEZqaqRRGJQksAxEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384645721151-otv5maphs27m9pg17ig5f7ieuk986mq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

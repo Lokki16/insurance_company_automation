@@ -97,6 +97,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
+  dart_style:
+    dependency: transitive
+    description:
+      name: dart_style
+      sha256: "7a03456c3490394c8e7665890333e91ae8a49be43542b616e414449ac358acd4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.4"
   dio:
     dependency: "direct main"
     description:
@@ -391,13 +399,21 @@ packages:
     source: hosted
     version: "4.2.4"
   protobuf:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: protobuf
       sha256: "01dd9bd0fa02548bf2ceee13545d4a0ec6046459d847b6b061d8a27237108a08"
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  protoc_plugin:
+    dependency: "direct main"
+    description:
+      name: protoc_plugin
+      sha256: e2be5014ba145dc0f8de20ac425afa2a513aff64fe350d338e481d40de0573df
+      url: "https://pub.dev"
+    source: hosted
+    version: "20.0.1"
   pub_semver:
     dependency: transitive
     description:
