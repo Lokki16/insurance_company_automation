@@ -25,7 +25,10 @@ class _Footer extends StatelessWidget {
       children: [
         CustomButton(
           buttonText: InsuranceText.registration,
-          onPressed: () => Get.toNamed(AppRoutes.routeToPersonalAreaPage),
+          onPressed: () {
+            // AuthorizationService().signUpWithEmailAndPassword(email, password);
+            Get.toNamed(AppRoutes.routeToPersonalAreaPage);
+          },
         ),
       ],
     );
@@ -54,11 +57,6 @@ class _Child extends StatelessWidget {
         CustomTextField(
           hintText: InsuranceText.patronymic,
           validator: (patronymic) => Validator.signInEmailValidator(patronymic),
-          onChanged: (patronymic) {},
-        ),
-        SizedBox(height: 25.h),
-        CustomCheckbox(
-          text: InsuranceText.notPatronymic,
           onChanged: (patronymic) {},
         ),
         SizedBox(height: 63.h),

@@ -33,6 +33,9 @@ export '../../data/navigation/routes.dart';
 export '../../data/repositories/authorization/authorization_repository.dart';
 export '../../data/repositories/policy/policy_repository.dart';
 
+// services
+export '../../data/services/authorization.dart';
+
 // models
 export '../../data/models/authorization/login_model.dart';
 export '../../data/models/authorization/registration_model.dart';
